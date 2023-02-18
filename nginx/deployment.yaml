@@ -18,17 +18,3 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
----
-
-# Service Configuration
-apiVersion: v1
-kind: Service
-metadata:
-  name: label-service-demo
-spec:
-  ports:
-  - port: 80
-    protocol: TCP
-  selector:
-    app: deploy-nginx
-  type: NodePort
